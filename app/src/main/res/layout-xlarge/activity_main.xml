@@ -15,15 +15,23 @@
         android:name="com.example.sebastian.reservalabapp.fragments.testFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="5"
         tools:layout="@layout/fragment_test" />
 
-<!--
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <fragment
+        android:name="com.example.sebastian.reservalabapp.fragments.DetailFragment"
+        android:id="@+id/data_detail_f"
         android:layout_width="match_parent"
-        android:layout_height="134dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp" />-->
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        tools:layout="@layout/fragment_detail"
+        />
+    <!--
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="134dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp" />-->
 
 </LinearLayout>
