@@ -8,13 +8,29 @@
     android:orientation="vertical"
     tools:context="com.example.sebastian.reservalabapp.DetailActivity">
 
-
-    <fragment
-        android:name="com.example.sebastian.reservalabapp.fragments.DetailFragment"
-        android:id="@+id/data_detail_f"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_detail"
-        />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/my_toolbar">
+
+        <fragment
+            android:name="com.example.sebastian.reservalabapp.fragments.DetailFragment"
+            android:id="@+id/data_detail_f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_detail"
+            />
+
+    </RelativeLayout>
+
+
 </LinearLayout>

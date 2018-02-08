@@ -4,14 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,13 +23,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.sebastian.reservalabapp.adaptadores.Adapter_recycler_view;
+import com.example.sebastian.reservalabapp.adaptadores.PagerAdapter;
 import com.example.sebastian.reservalabapp.fragments.DetailFragment;
 import com.example.sebastian.reservalabapp.fragments.testFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends FragmentActivity implements testFragment.DataListener {
+public class MainActivity extends AppCompatActivity implements testFragment.DataListener {
 
     private TextView mTextMessage;
     private List<String> nombres;
@@ -34,6 +38,8 @@ public class MainActivity extends FragmentActivity implements testFragment.DataL
     private RecyclerView.Adapter mA;
     private RecyclerView.LayoutManager mL;
     private int contador = 0;
+
+
 
     private boolean multipanel;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -61,16 +67,46 @@ public class MainActivity extends FragmentActivity implements testFragment.DataL
     };
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setMultipanel();
-        mTextMessage = (TextView) findViewById(R.id.message);
+        mTextMessage = findViewById(R.id.message);
+
+        Toolbar myToolbar =  findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
+
+        TabLayout tabLayout = findViewById(R.id.tab_menu);
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
+        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+        final ViewPager viewPager = findViewById(R.id.viewPager);
+        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+
+        viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                int position = tab.getPosition();
+                viewPager.setCurrentItem(position);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
         //mRecyclerView = findViewById(R.id.recycler_view);
 /*
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
@@ -117,7 +153,7 @@ public class MainActivity extends FragmentActivity implements testFragment.DataL
         //se prepara el onclick
         switch (item.getItemId()){
             case R.id.add_name:
-                addName(0);
+                //addName(0);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
