@@ -21,12 +21,10 @@ import com.example.sebastian.reservalabapp.R;
 import com.example.sebastian.reservalabapp.adaptadores.PagerAdapter;
 import com.example.sebastian.reservalabapp.fragments.DetailFragment;
 import com.example.sebastian.reservalabapp.fragments.testFragment;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -100,9 +98,8 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        Picasso.with(getApplicationContext()).load(R.drawable.default_user)
-                .transform(new CropCircleTransformation()).into((ImageView) findViewById(R.id.user_picture));
+        //ImageView imv = findViewById(R.id.user_picture);
+        //Picasso.with(getApplicationContext()).load(R.drawable.default_user).into(imv);
     }
 
     //setea la barra de herramientas

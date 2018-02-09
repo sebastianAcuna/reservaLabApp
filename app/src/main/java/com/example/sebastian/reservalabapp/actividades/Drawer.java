@@ -18,9 +18,7 @@ import com.example.sebastian.reservalabapp.R;
 import com.example.sebastian.reservalabapp.fragments.menu_fragments.AlertFragment;
 import com.example.sebastian.reservalabapp.fragments.menu_fragments.EmailFragment;
 import com.example.sebastian.reservalabapp.fragments.menu_fragments.InfoFragment;
-import com.squareup.picasso.Picasso;
 
-import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 public class Drawer extends AppCompatActivity {
 
@@ -93,8 +91,7 @@ public class Drawer extends AppCompatActivity {
             }
         });
 
-        Picasso.with(getApplicationContext()).load(R.drawable.default_user)
-                .transform(new CropCircleTransformation()).into((ImageView) findViewById(R.id.user_picture));
+
     }
 
     //setea la barra de herramientas
