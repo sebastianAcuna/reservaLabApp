@@ -9,9 +9,6 @@ import android.view.ViewGroup;
 
 import com.example.sebastian.reservalabapp.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HomeFragment extends Fragment {
 
 

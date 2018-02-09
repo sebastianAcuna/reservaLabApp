@@ -24,18 +24,17 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
+        Fragment frg = null;
         switch (position){
 
             case 0:
                 return new HomeFragment();
             case 1:
                 return new HoursFragment();
-            case 3:
+            case 2:
                 return new GetHoursFragment();
-            default:
-                return null;
         }
+        return frg;
     }
 
     @Override
