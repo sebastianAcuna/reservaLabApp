@@ -1,8 +1,9 @@
-package com.example.sebastian.reservalabapp;
+package com.example.sebastian.reservalabapp.actividades;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.sebastian.reservalabapp.R;
 import com.example.sebastian.reservalabapp.fragments.DetailFragment;
 
 public class DetailActivity extends AppCompatActivity {

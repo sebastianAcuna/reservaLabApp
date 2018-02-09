@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/reservaLabApp.iml" filepath="$PROJECT_DIR$/reservaLabApp.iml" />
+      <module fileurl="file://C:\Users\sebastian\AndroidStudioProjects\reservaLabApp2\reservaLabApp.iml" filepath="C:\Users\sebastian\AndroidStudioProjects\reservaLabApp2\reservaLabApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/reservaLabApp2.iml" filepath="$PROJECT_DIR$/reservaLabApp2.iml" />
     </modules>
   </component>

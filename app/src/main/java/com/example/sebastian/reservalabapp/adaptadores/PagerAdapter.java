@@ -4,9 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.sebastian.reservalabapp.fragments.GetHoursFragment;
-import com.example.sebastian.reservalabapp.fragments.HomeFragment;
-import com.example.sebastian.reservalabapp.fragments.HoursFragment;
+import com.example.sebastian.reservalabapp.fragments.tab_fragments.GetHoursFragment;
+import com.example.sebastian.reservalabapp.fragments.tab_fragments.HomeFragment;
+import com.example.sebastian.reservalabapp.fragments.tab_fragments.HoursFragment;
 
 /**
  * Created by sebastian on 08-02-2018.

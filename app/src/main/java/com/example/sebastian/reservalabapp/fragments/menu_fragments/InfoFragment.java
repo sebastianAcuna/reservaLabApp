@@ -1,4 +1,4 @@
-package com.example.sebastian.reservalabapp.fragments;
+package com.example.sebastian.reservalabapp.fragments.menu_fragments;
 
 
 import android.os.Bundle;
@@ -9,10 +9,13 @@ import android.view.ViewGroup;
 
 import com.example.sebastian.reservalabapp.R;
 
-public class HomeFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class InfoFragment extends Fragment {
 
 
-    public HomeFragment() {
+    public InfoFragment() {
         // Required empty public constructor
     }
 
@@ -21,9 +24,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_info, container, false);
     }
 
 }

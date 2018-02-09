@@ -1,4 +1,4 @@
-package com.example.sebastian.reservalabapp.fragments;
+package com.example.sebastian.reservalabapp.fragments.tab_fragments;
 
 
 import android.os.Bundle;

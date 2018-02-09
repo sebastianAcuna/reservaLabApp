@@ -2,14 +2,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sebastian.reservalabapp.fragments.HomeFragment">
+    tools:context="com.example.sebastian.reservalabapp.fragments.tab_fragments.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="First"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:gravity="center"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/btn_home_gragment"
+        android:text="IR"
+        android:gravity="center"
+        android:layout_gravity="center"/>
 
 </FrameLayout>
