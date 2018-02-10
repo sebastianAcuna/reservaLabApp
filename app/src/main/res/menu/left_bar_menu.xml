@@ -7,6 +7,10 @@
              android:id="@+id/menu_login"
              android:icon="@drawable/ic_login"
              android:title="Iniciar Sesión" />
+         <item
+             android:id="@+id/menu_home"
+             android:icon="@drawable/ic_home_icon"
+             android:title="Inicio" />
         <item
             android:id="@+id/menu_email"
             android:icon="@android:drawable/ic_dialog_email"
