@@ -28,11 +28,11 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         switch (position){
 
             case 0:
-                return new HomeFragment();
-            case 1:
                 return new HoursFragment();
-            case 2:
+            case 1:
                 return new GetHoursFragment();
+            case 2:
+                return new HomeFragment();
         }
         return frg;
     }

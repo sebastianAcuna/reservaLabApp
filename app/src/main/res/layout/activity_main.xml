@@ -9,7 +9,7 @@
     android:fitsSystemWindows="true">
     <!-- The main content view -->
 
-    <LinearLayout
+    <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -42,13 +42,7 @@
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
-        <!-- The navigation drawer -->
-
-
-        <!--    <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-               android:layout_below="@id/my_toolbar">
+        <!-- The navigation drawer
 
                 <fragment
                     android:id="@+id/data_fragment"
@@ -65,7 +59,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp" />-->
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/navView"

@@ -1,56 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<android.support.v4.widget.DrawerLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer_layout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-
-    <LinearLayout
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fitsSystemWindows="false">
 
-
-
-        <include android:id="@+id/my_toolbar"
-            layout="@layout/toolbar"/>
-
-        <android.support.design.widget.TabLayout
-            android:layout_height="wrap_content"
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:id="@+id/tab_menu"
-            android:layout_below="@id/my_toolbar"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
             android:layout_height="match_parent"
-            android:layout_width="match_parent"
-            android:layout_below="@id/tab_menu" />
+            android:orientation="vertical">
 
-        <FrameLayout
-            android:id="@+id/content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            <include android:id="@+id/my_toolbar"
+                layout="@layout/toolbar"/>
 
-    </LinearLayout>
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_horizontal"
+                android:text="Bienvenido"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
 
+            <EditText
+                android:id="@+id/et_login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:inputType="textEmailAddress"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/navView"
-        android:layout_gravity="start"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        app:headerLayout="@layout/header_navigation_drawer"
-        app:menu="@menu/left_bar_menu"
-        android:fitsSystemWindows="true" />
+            <EditText
+                android:id="@+id/et_login_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_login_email"
+                android:layout_marginTop="36dp"
+                android:inputType="textPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_login_email" />
 
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_login_pass"
+                android:layout_marginTop="44dp"
+                android:text=" Ingresar "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_login_pass" />
 
+             />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
-</android.support.v4.widget.DrawerLayout>
